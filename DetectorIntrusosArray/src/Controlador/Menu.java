@@ -2,10 +2,12 @@
 package Controlador;
 import java.util.Scanner;
 import Vista.ManipularSensores;
+import Modelo.Sensores;
 
 
 public class Menu {
     Scanner sc = new Scanner(System.in);
+    Sensores alarmas = new Sensores();
     
     public void Empezar(){
         
@@ -22,9 +24,12 @@ public class Menu {
         if(inicio == 1){
             ManipularSensores iniciar = new ManipularSensores();
             iniciar.manipular();
+                   
         }
         
         }while(inicio != 2);
+        
+        alarmas.getAlarmas();
         
     }
     

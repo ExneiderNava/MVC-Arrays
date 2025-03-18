@@ -1,8 +1,9 @@
 
 package Modelo;
-
+import java.util.ArrayList;
 
 public class Sensores {
+    static ArrayList<Integer>encendidas = new ArrayList<>();
     
     private boolean sensor1 = false, sensor2 = false, sensor3 = false;
     private  static boolean alarma = false;
@@ -22,12 +23,15 @@ public class Sensores {
         if(sensor1 && sensor2){
             System.out.println("Activando alarma");
             alarma = true;
+            encendidas.add(1);
         } else if(sensor2 && sensor3){
             System.out.println("Activando alarma");
-            alarma = true; 
+            alarma = true;
+            encendidas.add(1);
         } else if(sensor1 && sensor3){
             System.out.println("Activando alarma");
             alarma = true;
+            encendidas.add(1);
         } else{
             System.out.println("No hay peligro");
         }
@@ -35,6 +39,10 @@ public class Sensores {
     
     public boolean getAlarma(){
         return alarma;
+    }
+    
+    public void getAlarmas(){
+        System.out.println("La alarma fue encedida " + encendidas.size() + " Veces");
     }
     
 }
