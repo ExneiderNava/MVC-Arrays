@@ -1,8 +1,10 @@
 
 package Modelo;
+import java.util.ArrayList;
 
 
 public class Luces {
+    static ArrayList<Integer>Encedidas = new ArrayList<>();
     
     private static boolean noche, movimiento, luces = false;
     
@@ -29,6 +31,7 @@ public class Luces {
         if(noche && movimiento){
             System.out.println("Encendiendo luces");
             luces = true;
+            Encedidas.add(1);
         } else if(noche == false || movimiento == false ){
             System.out.println("Apagando luces");
             luces = false;
@@ -42,6 +45,10 @@ public class Luces {
         } else {
             System.out.println("luces apagadas");
         }
+    }
+    
+    public void getArrayluces(){
+        System.out.println("Las luces se encendieron " + Encedidas.size() + " Veces");
     }
     
 }

@@ -2,10 +2,12 @@
 package Controlador;
 import java.util.Scanner;
 import Vista.Sisteluces;
+import Modelo.Luces;
 
 public class Menu {
     Scanner sc = new Scanner(System.in);
     Sisteluces empezar = new Sisteluces();
+    Luces contar = new Luces();
     
     public void empezar(){
         
@@ -16,6 +18,7 @@ public class Menu {
         
         if(iniciar == 1){
             empezar.controlar();
+            contar.getArrayluces();
         }
     }
     
