@@ -16,7 +16,7 @@ public class Menu {
         
         if(decision == 1){
             iniciar.verificar();
-            iniciar.setArrays();
+            iniciar.getArrays();
         }
     }
     
