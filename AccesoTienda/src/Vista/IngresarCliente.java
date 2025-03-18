@@ -76,7 +76,7 @@ public class IngresarCliente {
         
     }
     
-    public void setArrays(){
+    public void getArrays(){
         System.out.println("CLIENTES INGRESADOS");
         
         for(int i = 0; i<numerodeentradas.size(); i++){
